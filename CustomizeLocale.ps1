@@ -1,9 +1,9 @@
 param (
-    [switch] $Help = $false,
-    [switch] $Details = $false,
+	[switch] $Help = $false,
+	[switch] $Details = $false,
 	[string] $TargetLocale,
-    [string] $Property="",
-    [string] $PropertyNewValue="",
+	[string] $Property="",
+	[string] $PropertyNewValue="",
 	[parameter(DontShow)] [switch] $SpawnNewProcess=$true  #For internal use, do not change
 )
 
@@ -26,19 +26,19 @@ if($Help -or ($TargetLocale.length -eq 0)){
 	write-host '-Details:  $true or $false, default value is $false'
 	write-host '-TargetLocale:  Name of a Locale (CultureInfo), pl-PL, en-US etc'
 	write-host '-Property:  The property that will be overridden'
-	write-host '            Examples:'
-	write-host '            GregorianDateTimeFormat.ShortDatePattern'
-	write-host '            GregorianDateTimeFormat.FullDateTimePattern'
-	write-host '            NumberFormat.NumberDecimalSeparator'
+	write-host '			Examples:'
+	write-host '			GregorianDateTimeFormat.ShortDatePattern'
+	write-host '			GregorianDateTimeFormat.FullDateTimePattern'
+	write-host '			NumberFormat.NumberDecimalSeparator'
 	write-host ''
-	write-host "     Know that some of the values are ready only and can't be overridden."
+	write-host "	 Know that some of the values are ready only and can't be overridden."
 	write-host ''
 	
 	write-host '-PropertyNewValue:   When this parameter has a value, given property is set to this value'
-	write-host '                     When this parameter is not specified, script shows current value of the given property'
-	write-host '                     Examples:'
-	write-host '                     For ShortDatePattern, this value can be yyyy-MM-dd'
-	write-host '                     For NumberDecimalSeparator, this value can be comma or dot'
+	write-host '					 When this parameter is not specified, script shows current value of the given property'
+	write-host '					 Examples:'
+	write-host '					 For ShortDatePattern, this value can be yyyy-MM-dd'
+	write-host '					 For NumberDecimalSeparator, this value can be comma or dot'
 	write-host ''
 	
 	write-host ".\$($scriptName) -Help:`$true"

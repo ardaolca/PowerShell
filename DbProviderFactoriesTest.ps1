@@ -1,7 +1,7 @@
 param (
-    [switch] $ShowAll = $true,
+	[switch] $ShowAll = $true,
 	[string] $DbProviderFactoryInvariantName,
-    [string] $ScalarQuery="",
+	[string] $ScalarQuery="",
 	[string] $ConnectionString=""
 )
 
