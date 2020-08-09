@@ -60,4 +60,4 @@ Write-output "Overlapping report Ids:"
 $endTime = get-date
 
 write-output ""
-write-output "Script was completed in $(($e-$s).totalseconds) seconds"
+write-output "Script was completed in $(($endTime-$startTime).totalseconds) seconds"
