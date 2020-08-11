@@ -16,6 +16,10 @@ if($DbProviderFactoryInvariantName.length -eq 0){
 	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"System.Data.SqlClient" -ConnectionString:"data source=sqlserver2016;user id=sa;password=P@ssw0rd" -ScalarQuery:"select 1 as id"'
 	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"System.Data.SqlClient" -ConnectionString:"data source=sqlserver2016;user id=sa;password=P@ssw0rd"'
 	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"System.Data.SqlClient"'
+	write-host ""
+	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"ODP.NET, Managed Driver" -ConnectionString:"data source=sqlserver2016;user id=username;password=P@ssw0rd" -ScalarQuery:"select 1 as id from dual"'
+	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"ODP.NET, Managed Driver" -ConnectionString:"data source=sqlserver2016;user id=username;password=P@ssw0rd"'
+	write-host '.\DbProviderFactoriesTest.ps1 -DbProviderFactoryInvariantName:"ODP.NET, Managed Driver"'
 	exit
 }
 
